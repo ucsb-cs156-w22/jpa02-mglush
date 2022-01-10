@@ -27,7 +27,7 @@ public class MenuItem {
     }
 
     /**
-     * Returns the category of the menu item
+     * Returns the category of the menu item.
      */
 
     public String getName() {
@@ -37,6 +37,7 @@ public class MenuItem {
     /**
      * Returns the price, formatted as a string with a $.
      * For example "$0.99", "$10.99", or "$3.50"
+     * @return a toString version of the priceInCents.
      */
 
     public String getPrice() {
@@ -59,6 +60,7 @@ public class MenuItem {
 
     /**
      * get the price in cents only
+     * @return an int, the priceInCents private variable.
      */
 
     public int getPriceInCents() {
