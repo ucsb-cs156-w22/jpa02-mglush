@@ -14,8 +14,11 @@ public class MenuItem {
     public static class TooNarrowException extends RuntimeException {
     }
 
-
     public MenuItem(String name, int priceInCents, String category) {
+        // stub
+    }
+
+    public static void main(String[] args) {
         // stub
     }
 

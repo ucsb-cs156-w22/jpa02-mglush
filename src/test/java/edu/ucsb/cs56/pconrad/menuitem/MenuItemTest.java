@@ -9,7 +9,6 @@ public class MenuItemTest {
 
     private MenuItem smallPokeBowl;
 
-
     @Test
     public void test_getPrice() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
