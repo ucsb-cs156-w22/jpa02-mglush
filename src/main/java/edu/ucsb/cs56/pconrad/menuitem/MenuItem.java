@@ -18,8 +18,20 @@ public class MenuItem {
         // stub
     }
 
-    public static void main(String[] args) {
-        // stub
+    /**
+     * Returns the category of the menu item
+     */
+
+    public String getCategory() {
+        return "stub";
+    }
+
+    /**
+     * Returns the category of the menu item
+     */
+
+    public String getName() {
+        return "stub";
     }
 
     /**
@@ -43,6 +55,14 @@ public class MenuItem {
 
     public String getPrice(int width) {
         return "stub";
+    }
+
+    /**
+     * get the price in cents only
+     */
+
+    public int getPriceInCents() {
+        return 0; // stub!
     }
 
     /**
