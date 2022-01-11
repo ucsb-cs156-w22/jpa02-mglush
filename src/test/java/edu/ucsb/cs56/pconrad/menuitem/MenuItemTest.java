@@ -127,6 +127,14 @@ public class MenuItemTest {
     }
 
     @Test
+    public void test_getPrice_01() {
+        assertThrows(MenuItem.TooNarrowException.class, () -> {
+            smallPokeBowl = new MenuItem("Small Poke Bowl", 0, "Poke Bowls");
+            smallPokeBowl.getPrice(0);
+        });
+    }
+
+    @Test
     public void test_getPriceInCents() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
         assertEquals(1049, smallPokeBowl.getPriceInCents());
