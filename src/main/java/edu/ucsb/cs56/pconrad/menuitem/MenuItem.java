@@ -43,9 +43,12 @@ public class MenuItem {
      */
 
     public String getPrice() {
-        String result = "$" + Integer.toString(this.priceInCents / 100)
+        if (this.priceInCents < 100) {
+            return "$0." + Integer.toString(this.priceInCents);
+        } else {
+            return "$" + Integer.toString(this.priceInCents / 100)
                       + "." + Integer.toString(this.priceInCents % 100);
-        return result;
+        }
     }
 
     /**
