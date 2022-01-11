@@ -59,8 +59,13 @@ public class MenuItem {
      */
 
     public String getPrice(int width) {
-        String result = "$" + Integer.toString(this.priceInCents / 100)
+        String result;
+        if (this.priceInCents < 100) {
+            result = "$0." + Integer.toString(this.priceInCents);
+        } else {
+            result = "$" + Integer.toString(this.priceInCents / 100)
                       + "." + Integer.toString(this.priceInCents % 100);
+        }
         if (result.length() > width) {  throw new TooNarrowException(); }
         return result;
     }
