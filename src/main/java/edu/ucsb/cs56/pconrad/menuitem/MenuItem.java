@@ -86,7 +86,7 @@ public class MenuItem {
         }
 
         if (result.length() > width) { throw new TooNarrowException(); }
-        else if (result.length() < width) {
+        if (result.length() < width) {
             while (result.length() != width) {
                 result = " " + result;
             }
