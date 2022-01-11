@@ -43,17 +43,19 @@ public class MenuItem {
      */
 
     public String getPrice() {
-        int cents = this.priceInCents;
-        if (cents == 0) {
+        String centsString = Integer.toString(this.priceInCents);
+        String dollarPart;
+        String centPart;
+        if (this.priceInCents == 0) {
             return "$0.00";
-        } else if (cents < 10) {
-            return "$0.0" + Integer.toString(cents);
-        } else if (cents < 100) {
-            return "$0." + Integer.toString(cents);
-        } else if (cents % 100 == 0) {
-            return "$" + Integer.toString(cents / 100) + ".00";
+        } else if (this.priceInCents < 10) {
+            return "$0.0" + centsString;
+        } else if (this.priceInCents < 100) {
+            return "$0." + centsString;
         } else {
-            return "$" + Integer.toString(cents / 100) + "." + Integer.toString(cents % 100);
+            dollarPart = centsString.substring(0, centsString.length() - 2);
+            centPart = centsString.substring(centsString.length() - 2);
+            return "$" + dollarPart + "." + centPart;
         }
     }
 
@@ -68,21 +70,25 @@ public class MenuItem {
      */
 
     public String getPrice(int width) {
+        String centsString = Integer.toString(this.priceInCents);
+        String dollarPart;
+        String centPart;
         String result;
-        int cents = this.priceInCents;
-        if (cents == 0) {
+
+        if (this.priceInCents == 0) {
             result = "$0.00";
-        } else if (cents < 10) {
-            result = "$0.0" + Integer.toString(cents);
-        } else if (cents < 100) {
-            result = "$0." + Integer.toString(cents);
-        } else if (cents % 100 == 0) {
-            result = "$" + Integer.toString(cents / 100) + ".00";
+        } else if (this.priceInCents < 10) {
+            result = "$0.0" + centsString;
+        } else if (this.priceInCents < 100) {
+            result = "$0." + centsString;
         } else {
-            result = "$" + Integer.toString(cents / 100) + "." + Integer.toString(cents % 100);
+            dollarPart = centsString.substring(0, centsString.length() - 2);
+            centPart = centsString.substring(centsString.length() - 2);
+            result = "$" + dollarPart + "." + centPart;
         }
-        if (result.length() > width) {  throw new TooNarrowException(); }
-        return result;
+
+        if (result.length() > width) { throw new TooNarrowException(); }
+        else { return result; }
     }
 
     /**

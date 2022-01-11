@@ -33,13 +33,19 @@ public class MenuItemTest {
     }
 
     @Test
+    public void test_getPrice_boundary() {
+        smallPokeBowl = new MenuItem("Small Poke Bowl", 10, "Poke Bowls");
+        assertEquals("$0.10", smallPokeBowl.getPrice());
+    }
+
+    @Test
     public void test_getPrice_cents2() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 49, "Poke Bowls");
         assertEquals("$0.49", smallPokeBowl.getPrice());
     }
 
     @Test
-    public void test_getPrice_boundary() {
+    public void test_getPrice_boundary2() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 100, "Poke Bowls");
         assertEquals("$1.00", smallPokeBowl.getPrice());
     }
@@ -57,9 +63,15 @@ public class MenuItemTest {
     }
 
     @Test
-    public void test_getPrice_11() {
+    public void test_getPrice_11_small() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 9, "Poke Bowls");
         assertEquals("$0.09", smallPokeBowl.getPrice(11));
+    }
+
+    @Test
+    public void test_getPrice_11_boundary() {
+        smallPokeBowl = new MenuItem("Small Poke Bowl", 10, "Poke Bowls");
+        assertEquals("$0.10", smallPokeBowl.getPrice(11));
     }
 
     @Test
