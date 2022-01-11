@@ -51,11 +51,10 @@ public class MenuItem {
             return "$0.0" + centsString;
         } else if (this.priceInCents < 100) {
             return "$0." + centsString;
-        } else {
-            dollarPart = centsString.substring(0, centsString.length() - 2);
-            centPart = centsString.substring(centsString.length() - 2);
-            return "$" + dollarPart + "." + centPart;
         }
+        dollarPart = centsString.substring(0, centsString.length() - 2);
+        centPart = centsString.substring(centsString.length() - 2);
+        return "$" + dollarPart + "." + centPart;
     }
 
     /**
