@@ -43,11 +43,17 @@ public class MenuItem {
      */
 
     public String getPrice() {
-        if (this.priceInCents < 100) {
-            return "$0." + Integer.toString(this.priceInCents);
+        int cents = this.priceInCents;
+        if (cents == 0) {
+            return "$0.00";
+        } else if (cents < 10) {
+            return "$0.0" + Integer.toString(cents);
+        } else if (cents < 100) {
+            return "$0." + Integer.toString(cents);
+        } else if (cents % 100 == 0) {
+            return "$" + Integer.toString(cents / 100) + ".00";
         } else {
-            return "$" + Integer.toString(this.priceInCents / 100)
-                      + "." + Integer.toString(this.priceInCents % 100);
+            return "$" + Integer.toString(cents / 100) + "." + Integer.toString(cents % 100);
         }
     }
 
@@ -63,11 +69,17 @@ public class MenuItem {
 
     public String getPrice(int width) {
         String result;
-        if (this.priceInCents < 100) {
-            result = "$0." + Integer.toString(this.priceInCents);
+        int cents = this.priceInCents;
+        if (cents == 0) {
+            result = "$0.00";
+        } else if (cents < 10) {
+            result = "$0.0" + Integer.toString(cents);
+        } else if (cents < 100) {
+            result = "$0." + Integer.toString(cents);
+        } else if (cents % 100 == 0) {
+            result = "$" + Integer.toString(cents / 100) + ".00";
         } else {
-            result = "$" + Integer.toString(this.priceInCents / 100)
-                      + "." + Integer.toString(this.priceInCents % 100);
+            result = "$" + Integer.toString(cents / 100) + "." + Integer.toString(cents % 100);
         }
         if (result.length() > width) {  throw new TooNarrowException(); }
         return result;
