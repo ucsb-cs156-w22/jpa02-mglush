@@ -38,8 +38,7 @@ public class MenuItem {
 
     /**
      * Returns the price, formatted as a string with a $.
-     * For example "$0.99", "$10.99", or "$3.50"
-     * @return a toString version of the priceInCents.
+     * For example "$0.99", "$10.99", or "$3.50".
      */
 
     public String getPrice() {
