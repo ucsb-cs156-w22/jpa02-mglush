@@ -90,6 +90,7 @@ public class MenuItem {
             while (result.length() != width) {
                 result = " " + result;
             }
+            return result;
         }
         return result;
     }
