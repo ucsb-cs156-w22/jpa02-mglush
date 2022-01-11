@@ -15,7 +15,9 @@ public class MenuItem {
     }
 
     public MenuItem(String name, int priceInCents, String category) {
-        // stub
+        this.name = name;
+        this.priceInCents = priceInCents;
+        this.category = category;
     }
 
     /**
@@ -23,7 +25,7 @@ public class MenuItem {
      */
 
     public String getCategory() {
-        return "stub";
+        return this.category;
     }
 
     /**
@@ -31,7 +33,7 @@ public class MenuItem {
      */
 
     public String getName() {
-        return "stub";
+        return this.name;
     }
 
     /**
@@ -41,7 +43,9 @@ public class MenuItem {
      */
 
     public String getPrice() {
-        return "stub";
+        String result = "$" + Integer.toString(this.priceInCents / 100)
+                      + "." + Integer.toString(this.priceInCents % 100);
+        return result;
     }
 
     /**
@@ -55,7 +59,10 @@ public class MenuItem {
      */
 
     public String getPrice(int width) {
-        return "stub";
+        String result = "$" + Integer.toString(this.priceInCents / 100)
+                      + "." + Integer.toString(this.priceInCents % 100);
+        if (result.length() > width) {  throw new TooNarrowException(); }
+        return result;
     }
 
     /**
@@ -64,7 +71,7 @@ public class MenuItem {
      */
 
     public int getPriceInCents() {
-        return 0; // stub!
+        return this.priceInCents; // stub!
     }
 
     /**
@@ -76,7 +83,7 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return "stub";
+        return this.name + "," + Integer.toString(this.priceInCents) + "," + this.category;
     }
 
 }
