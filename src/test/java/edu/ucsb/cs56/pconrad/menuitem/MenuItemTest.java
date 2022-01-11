@@ -59,49 +59,49 @@ public class MenuItemTest {
     @Test
     public void test_getPrice_10() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
-        assertEquals("$10.49", smallPokeBowl.getPrice(10));
+        assertEquals("    $10.49", smallPokeBowl.getPrice(10));
     }
 
     @Test
     public void test_getPrice_11() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
-        assertEquals("$10.49", smallPokeBowl.getPrice(11));
+        assertEquals("$10.49", smallPokeBowl.getPrice(6));
     }
 
     @Test
     public void test_getPrice_11_small() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 9, "Poke Bowls");
-        assertEquals("$0.09", smallPokeBowl.getPrice(11));
+        assertEquals("$0.09", smallPokeBowl.getPrice(5));
     }
 
     @Test
     public void test_getPrice_11_boundary() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 10, "Poke Bowls");
-        assertEquals("$0.10", smallPokeBowl.getPrice(11));
+        assertEquals("      $0.10", smallPokeBowl.getPrice(11));
     }
 
     @Test
-    public void test_getPrice_12() {
+    public void test_getPrice_10_noDollars() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 49, "Poke Bowls");
-        assertEquals("$0.49", smallPokeBowl.getPrice(12));
+        assertEquals("     $0.49", smallPokeBowl.getPrice(10));
     }
 
     @Test
     public void test_getPrice_13() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 100, "Poke Bowls");
-        assertEquals("$1.00", smallPokeBowl.getPrice(13));
+        assertEquals("        $1.00", smallPokeBowl.getPrice(13));
     }
 
     @Test
     public void test_getPrice_14() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 0, "Poke Bowls");
-        assertEquals("$0.00", smallPokeBowl.getPrice(14));
+        assertEquals(" $0.00", smallPokeBowl.getPrice(6));
     }
 
     @Test
     public void test_getPrice_7() {
         smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
-        assertEquals("$10.49", smallPokeBowl.getPrice(7));
+        assertEquals(" $10.49", smallPokeBowl.getPrice(7));
     }
 
     @Test
