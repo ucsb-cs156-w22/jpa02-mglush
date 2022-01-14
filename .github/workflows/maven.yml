@@ -14,9 +14,17 @@ jobs:
         with:
           java-version: 17.0.x
       - name: Build with Maven
+<<<<<<< HEAD
         run: mvn -B test jacoco:report
+=======
+        run: mvn test jacoco:report
+>>>>>>> 24af2da6245df2eaf515e7a8dbf052299dd93301
       - name: Upload to Codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: bash <(curl -s https://codecov.io/bash)
+<<<<<<< HEAD
       
+=======
+     
+>>>>>>> 24af2da6245df2eaf515e7a8dbf052299dd93301

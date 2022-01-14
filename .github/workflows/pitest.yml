@@ -19,4 +19,8 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: pitest-mutation-testing
+<<<<<<< HEAD
           path: target/pit-reports/**/*  
+=======
+          path: target/pit-reports/**/*  
+>>>>>>> 24af2da6245df2eaf515e7a8dbf052299dd93301

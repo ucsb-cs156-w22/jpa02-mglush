@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Emacs/vim
 
 *~
@@ -59,3 +60,37 @@ buildNumber.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+=======
+# For Java
+*.class
+
+
+# For various IDEs
+.classpath
+.project
+.settings
+.vscode/
+*.sublime-*
+.idea
+*.iml
+
+# For Maven
+
+target
+dependency-reduced-pom.xml
+
+# For emacs/vim
+*~
+*.sw?
+\#*\#
+
+
+# For MacOS
+.DS_Store
+
+# Application specific secrets files
+
+heroku.json
+localhost.json
+
+>>>>>>> 24af2da6245df2eaf515e7a8dbf052299dd93301
