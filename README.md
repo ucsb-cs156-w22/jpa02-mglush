@@ -2,7 +2,7 @@
 
 Repo: https://ucsb-cs156-w22/jpa02-mglush
 
-On Heroku: https://cs156-w22-jpa02-mglush.herokuapp.com
+On Heroku: https://ucsb-cs156-w22-jpa02-mglush.herokuapp.com/
 
 * TODO: Correct the links to codecov report below
   then delete this TODO.  Replace it with 
