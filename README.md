@@ -4,10 +4,6 @@ Repo: https://ucsb-cs156-w22/jpa02-mglush
 
 On Heroku: https://ucsb-cs156-w22-jpa02-mglush.herokuapp.com/
 
-* TODO: Correct the links to codecov report below
-  then delete this TODO.  Replace it with 
-  a link to your codecov report.
-
 On Codecov: https://codecov.io/gh/ucsb-cs156-w22/jpa02-mglush
 
 
